@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto-Auto Avenida</title>
+    <link rel="shortcut icon" href="./img/ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="idheader"></header>
+    <main>
+        <div class="encabezado">
+            <h1>Formulario de Contacto</h1>
+        </div>
+        <form
+            style="background-color: rgba(223, 234, 243, 0.514);margin:10px auto ; width: 400px; padding: 20px; border-radius: 20px;"
+            action="./show-data.html" target="_blank" id="formContacto" onsubmit="return validarContacto();">
+            <label for="nombre">Nombre y Apellido
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre y Apellido">
+            </label>
+            <label for="email">Correo Electronico
+                <input type="email" name="email" id="email" placeholder="usuario@dominio.com">
+            </label>
+            <label for="telefono">Teléfono
+                <input type="number" name="telefono" id="telefono" maxlength="14" placeholder="35121234789">
+            </label>
+            <label for="consulta">Consulta
+                <textarea name="consulta" id="consulta" cols="50" rows="10"
+                    placeholder="Escriba aqui su consulta"></textarea>
+            </label>
+            <input type="submit" id="boton" value="Enviar">
+            <input type="reset" id="boton" value="Limpiar Datos">
+            <p class="validacionContacto" id="validacionContacto"></p>
+        </form>
+        <div class="container-btn-wapp">
+            <a href="http://api.whatsapp.com/send?phone=5493512222222&text=Automotores%20Avenida,%20En%20que%20podemos%20ayudarte?"
+                target="_blank">
+                <img class="botonWApp" src="./img/whatsapp.png" alt="">
+            </a>
+        </div>
+    </main>
+    <footer id="idfooter"></footer>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /*padding: 1em;*/
+}
+
+section h2{
+    font-size: 3em;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 2.5em;
+}
+section form{
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 300px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+section form label{
+    width: 100%;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}   
+
+section form input{
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.8em;
+    border-radius: 9px;
+    border: none;
+    outline-color: blue;
+    background-color: rgba(245, 238, 238, 0.829);
+}
+   
+section form input[type="submit"]{
+    margin-top: 1.5em;
+    background-color: blue;
+    color: white;
+}    
+
+.table td,th {
+    text-align: center;
+} 

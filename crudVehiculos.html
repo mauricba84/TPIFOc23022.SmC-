@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD-Auto Avenida</title>
+    <link rel="shortcut icon" href="./img/ico.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="./css/estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header id="idheader">
+    </header>
+    <main>
+        <h1>Listado de Vehículos Disponibles</h1>
+        
+        <div class="container m-lg-1" id="app">
+            
+            <div>
+               <label id="usuario"></label>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex p-2 m-lg-0 justify-content-end">
+                <label>Ordenar por: </label>
+                <button class="btn btn-outline-secondary" @click="ordenar(1)">Marca</button>
+                <button class="btn btn-outline-secondary" @click="ordenar(2)">Precio Venta</button>
+            </div>
+
+            <a href="producto_nuevo.html" class="btn btn-outline-primary m-lg-3">Nuevo</a>
+            <div v-if="error">
+                <p>Lo sentimos , Fallo la carga de los datos!</p>
+            </div>
+            <div v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+                <section v-else>
+                    <div>
+                        <table class="table table-responsive table-striped table-bordered m-lg-3 align-content-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Cod</th>
+                                    <th scope="col">Marca</th>
+                                    <th scope="col">Modelo</th>
+                                    <th scope="col">Año</th>
+                                    <th scope="col">Versión</th>
+                                    <th scope="col">Color</th>
+                                    <th scope="col">Km</th>
+                                    <th scope="col">Transmision</th>
+                                    <th scope="col">Combustible</th>
+                                    <th scope="col">Compra</th>
+                                    <th scope="col">Venta</th>
+                                    <th scope="col">Contacto</th>
+                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Operaciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="" v-for="producto in productos">
+                                    <td scope="row">{{producto.id}}</td>
+                                    <td>{{producto.marca}}</td>
+                                    <td>{{producto.modelo}}</td>
+                                    <td>{{producto.anio}}</td>
+                                    <td>{{producto.version}}</td>
+                                    <td>{{producto.color}}</td>
+                                    <td>{{producto.km}}</td>
+                                    <td>{{producto.transmision}}</td>
+                                    <td>{{producto.combustible}}</td>
+                                    <td>{{producto.precio_compra}}</td>
+                                    <td>{{producto.precio_venta}}</td>
+                                    <td>{{producto.contacto}}</td>
+                                    <td>
+                                        <img width="60" :src="producto.imagen" :alt="producto.nombre">
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-outline-success mb-2"
+                                            :href="'producto_update.html?id='+ producto.id">Editar</a>
+                                        <button type="button" class="btn btn-outline-danger"
+                                            v-on:click="eliminar(producto.id)">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </main>
+    <footer id="idfooter">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/productos.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

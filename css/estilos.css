@@ -1,0 +1,353 @@
+/*---------- General----------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Header-Footer-Body*/
+header {
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+body {
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+
+}
+
+header #logo {
+    width: 200px;
+    bottom: 5px;
+    left: 15px;
+}
+
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 2rem;
+    color: red;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+footer {
+    width: 100%;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.logo-footer {
+    text-align: left;
+}
+
+footer text {
+    color: black;
+}
+
+#logo {
+    width: 100%;
+}
+
+#fondo {
+    width: 100vw;
+}
+
+.aheader {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    background-color: #c3c3c3;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.aheader:hover {
+    outline: 3px solid black;
+}
+
+footer #logo {
+    width: 200px;
+    text-align: start
+}
+
+footer nav {
+    width: 220px;
+    margin: 0 auto;
+}
+
+footer a {
+    text-decoration: none;
+    padding: 5px;
+}
+
+footer p {
+    text-align: center;
+    font-size: small;
+}
+
+/*Boton WApp Animado*/
+.container-btn-wapp {
+    background-color: #30e42088;
+    border: 3px solid #fff;
+    position: fixed;
+    z-index: 999;
+    border-radius: 70%;
+    bottom: 20px;
+    right: 20px;
+    padding: 25px;
+    transition: ease 1s;
+    animation: efecto-btn-wapp 2s infinite;
+}
+
+.container-btn-wapp:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.botonWApp {
+    width: 25px;
+    transition: ease 1s;
+}
+
+@keyframes efecto-btn-wapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.73);
+    }
+
+    100% {
+        box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.082);
+    }
+}
+
+/*----------Página Index----------*/
+
+.slider {
+    width: 95%;
+    margin: auto;
+    margin: 20px auto 0;
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: deslizar 12s infinite;
+    animation-timing-function: ease-in;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider img {
+    width: 100%;
+    border-radius: 5%;
+    background-size: cover;
+}
+
+@keyframes deslizar {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    95% {
+        margin-left: -300%;
+    }
+
+}
+
+.lemaEmpresa {
+    color: rgba(29, 64, 131, 0.979);
+    text-align: center;
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    padding-top: 0px;
+}
+
+.lemaEmpresa h1 {
+    color: rgba(255, 0, 0, 0.774)
+}
+
+/*----------Página Productos----------*/
+.flex-container-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 200px;
+    height:720px;
+    margin: 20px;
+    border:solid;
+    border-radius: 15px;
+    overflow:hidden;
+    background-color:white;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor:default;
+    transition: all 400ms ease;
+    display:block;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform:translateY(-1%);
+}
+.card img{
+    height: 100%;
+    width: 200px;
+    border-radius: 15px 15px 0px 0px;
+    margin-bottom: 5px;
+    /*background-size: cover;*/
+    object-fit: cover;
+}
+.card .contenido{
+    padding:5px;
+    text-align:center;
+}
+
+.card .contenido h2{
+    font-size:larger;
+    margin-bottom: 5px;
+}
+
+.card .contenido h3{
+    font-weight: 100;
+    margin-bottom: 5px;
+    font-size:medium;
+    color: rgba(0, 0, 0, 0.6)
+}
+
+.card .contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding:10px;
+    margin-top:10px;
+    color:rgb(201, 33, 33);
+    border:2px solid red;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+.card .contenido a:hover{
+    background-color: rgb(226, 16, 16);
+    color:white;
+}
+
+
+/*----------Página Sucursales----------*/
+.mapa {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border: 2px solid burlywood;
+    text-align: center;
+}
+
+.sucursal {
+    text-align: center;
+    font-size: 100%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.encabezado h1 {
+    vertical-align: middle;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: red;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.tablaResultados {
+    margin: 15 auto;
+}
+
+@media screen and (max-width: 600px) {
+
+    /*Celular*/
+    .grid-container {
+        width: 95%;
+        grid-template-areas: 'logo'
+            'izquierda'
+            'derecha'
+            'item1'
+            'item2'
+            'item3'
+            'item4'
+            'item5'
+            'foot er';
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+
+    /*Tablet*/
+    .grid-container {
+        width: 80%;
+        grid-template-areas: 'logo logo logo'
+            'izquierda izquierda izquierda'
+            'derecha derecha derecha'
+            'item1 item2 item3'
+            'item4 item 5 item6'
+            'footer footer footer';
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    /*Pc*/
+    .grid-container {
+        width: 70%;
+        grid-template-areas:'logo logo logo'
+                            'izquierda izquierda izquierda derecha derecha derecha'
+                            'item1 item2 item3''item4 item 5 item6'
+                            'footer footer footer';
+    }
+}
+
+
+
+
+

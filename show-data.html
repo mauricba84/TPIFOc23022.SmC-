@@ -1,0 +1,93 @@
+<html>
+
+<head>
+  <title>Envio Datos-Auto Avenida</title>
+  <link rel="shortcut icon" href="./img/ico.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+  <header id="idheader">
+
+  </header>
+
+  <main>
+    <div class="container-btn-wapp">
+      <a href="http://api.whatsapp.com/send?phone=3512276599" target="_blank">
+        <img class="botonWApp" src="./img/whatsapp.png" alt="">
+      </a>
+    </div>
+
+    <p align=center>&nbsp;</p>
+    <div class="encabezado">
+      <h1>Información Enviada</h1>
+    </div>
+
+
+    <table class="tablaResultados" border="1" align=center width="226">
+      <tr>
+        <th align="center">Campo</th>
+        <th align="center">Valor</th>
+      </tr>
+
+      <script language="javascript">
+        var args = location.search.substr(1).split('&');
+        for (var i = 0; i < args.length; ++i) {
+          var parts = args[i].split('=');
+          if (parts != null) {
+            var field = parts[0];
+            var value = parts[1];
+            if (value == null) {
+              value = "null"
+            }
+            else {
+              value = '"' + unescape(value.replace(/\+/g, ' ')) + '"';
+            }
+
+            document.writeln('<tr><td align="center">' + field + '</td>');
+            document.writeln('<td align="center">' + value + '</td></tr>');
+          }
+        }
+      </script>
+
+      <noscript>
+        <tr>
+          <td>
+            <p>You need to turn on Javascript in your browser.</p>
+
+            <p>In Microsoft Internet Explorer 4 or greater:</p>
+            <ul>
+              <li>From the "Tools" menu (in IE 4, it's the "View" menu), select "Internet Options".</li>
+              <li>Click on the "Security" tab.</li>
+              <li>Click on the "Custom Level" button. (In IE 4, select "Custom"
+                and then click on "Settings...".)</li>
+              <li>Under "Active scripting" make sure "Enable" is selected.</li>
+            </ul>
+
+            <p>In Netscape version 4 or greater:</p>
+            <ul>
+              <li>From the <b>Edit</b> menu, select <b>Preferences</b>.</li>
+              <li>In the <b>Category</b> list on the left, click on the word "Advanced".</li>
+              <li>In the panel on the right, make sure "Enable JavaScript" is checked.</li>
+              <li>Click the <b>OK</b> button.</li>
+            </ul>
+
+          </td>
+        </tr>
+      </noscript>
+
+    </table>
+    <div class="container-btn-wapp">
+      <a href="http://api.whatsapp.com/send?phone=5493512222222&text=Automotores%20Avenida,%20En%20que%20podemos%20ayudarte?"
+        target="_blank">
+        <img class="botonWApp" src="./img/whatsapp.png" alt="">
+      </a>
+    </div>
+  </main>
+  <footer id="idfooter">
+
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
